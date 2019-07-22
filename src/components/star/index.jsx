@@ -18,10 +18,10 @@ const Star = ({full, index, setHover, setStarCount}) => {
 }
 
 Star.propTypes = {
-    full: PropTypes.bool,
-    index: PropTypes.number,
-    setHover: PropTypes.func,
-    setStarCount: PropTypes.func,
+    full: PropTypes.bool.isRequired,
+    index: PropTypes.number.isRequired,
+    setHover: PropTypes.func.isRequired,
+    setStarCount: PropTypes.func.isRequired,
 };
 
 export default Star;

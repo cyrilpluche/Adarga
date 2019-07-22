@@ -25,11 +25,11 @@ const starWrapper = ({starCount, clickedStarCount, hover, setHover, setStarCount
 }
 
 starWrapper.propTypes = {
-    starCount: PropTypes.number,
+    starCount: PropTypes.number.isRequired,
     clickedStarCount: PropTypes.number,
-    hover: PropTypes.number,
-    setHover: PropTypes.func,
-    setStarCount: PropTypes.func,
+    hover: PropTypes.number.isRequired,
+    setHover: PropTypes.func.isRequired,
+    setStarCount: PropTypes.func.isRequired,
 };
 
 export default starWrapper;
