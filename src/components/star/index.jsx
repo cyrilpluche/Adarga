@@ -1,12 +1,10 @@
 import React from 'react';
 import StarIcon from '@material-ui/icons/Star'; // full star
 import StarBorderIcon from '@material-ui/icons/StarBorder'; // empty star
+import PropTypes from 'prop-types';
 import "./Star.css"
 
-const Star = props => {
-
-    const {full, index} = props
-    const {setHover, setStarCount} = props
+const Star = ({full, index, setHover, setStarCount}) => {
 
     return (
         <React.Fragment>
@@ -18,5 +16,12 @@ const Star = props => {
         </React.Fragment>
     )
 }
+
+Star.propTypes = {
+    full: PropTypes.bool,
+    index: PropTypes.number,
+    setHover: PropTypes.func,
+    setStarCount: PropTypes.func,
+};
 
 export default Star;

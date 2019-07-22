@@ -1,10 +1,9 @@
 import React from 'react';
 import Star from '../star/index'
+import PropTypes from 'prop-types';
 
-const starWrapper = props => {
+const starWrapper = ({starCount, clickedStarCount, hover, setHover, setStarCount}) => {
 
-    const {starCount, clickedStarCount, hover} = props
-    const {setHover, setStarCount} = props
     const stars = []
 
     const isFull = (i) => {
@@ -24,5 +23,13 @@ const starWrapper = props => {
         </div>
     )
 }
+
+starWrapper.propTypes = {
+    starCount: PropTypes.number,
+    clickedStarCount: PropTypes.number,
+    hover: PropTypes.number,
+    setHover: PropTypes.func,
+    setStarCount: PropTypes.func,
+};
 
 export default starWrapper;

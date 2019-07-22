@@ -9,7 +9,7 @@ function App() {
 
     function handleChange(e) {
         const newValue = e.target.value;
-        setStars(newValue);
+        setStars(Number(newValue));
     }
 
     function handleInputLeave() {
@@ -29,6 +29,7 @@ function App() {
             <TextField
                 id="star-count"
                 label="Number of Stars"
+                type="number"
                 value={stars}
                 onChange={handleChange}
                 onBlur={handleInputLeave}
